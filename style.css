@@ -1,0 +1,242 @@
+/* ---------- BASIC RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body {
+  background-color: #111; /* dark ninja background */
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: #ff7b00; /* Naruto orange */
+  background-image: url(pngegg.png);
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: 20px center;
+  text-align: center;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 1px 2px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+ color: red;
+}
+/* search button */
+.srch{
+    width: 150px;
+    max-width: 70vh;
+    height: 30px;
+    background: rgb(245, 245, 245);
+    border: 2px solid rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+}
+.btn{
+width: 40px;
+height: 30px;
+background:orange ;
+font-weight: bold;
+border: 1px solid rgb(255, 255, 255);
+border-radius: 0 5px 5px 0;
+cursor: pointer;
+transition: 0.3s;
+}
+.btn:hover{
+    background: linear-gradient(90deg, white, rgb(248, 6, 6));
+    color: rgb(0, 0, 0);
+}
+/* sliding img */
+.containar{
+    padding: 2rem;
+}
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+ .slider{
+    display: flex;
+    aspect-ratio: 3/1;
+    overflow-x:auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsl(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+
+ }
+ .slider img{
+    width:100px;
+    height: 600px;
+    flex: 1 0 100%;
+    scroll-snap-align:start;
+    object-fit: cover;
+
+ }
+
+ .slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #ca7300;
+    opacity: 0.75;
+    transition: opasity ease 250ms;
+ }
+
+ .slider-nav a:hover{
+    opacity: 1;
+ }
+
+/* ---------- HERO SECTION ---------- */
+
+ .hero {
+  background: url(naruto\ web.png) center/cover no-repeat;
+  flex: 1;
+  display: flex;
+  justify-content: space-between; /* text left, images right */
+  align-items: center;
+  padding: 80px 60px;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 80%;
+  text-align: left;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #ffae00;
+  text-shadow: 2px 2px 8px #000;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+/* Ninja profiles (right side) */
+.hero-profiles {
+  display: flex;
+ flex-direction: column;
+  gap: 20px;
+  justify-content:center;
+  align-items: center;
+}
+
+.ninja {
+  text-align: center;
+  color: #ffae00;
+  transition: transform 0.3s;
+}
+
+.ninja img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #ffae00;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.7);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ninja p {
+  margin-top: 6px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Hover glow effect */
+.ninja:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgb(255, 0, 0);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #ff7b00;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #222;
+}
+
+.footer-info p {
+  margin: 3px 0;
+}
+
+.footer-info a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-credit {
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  padding-top: 8px;
+}
